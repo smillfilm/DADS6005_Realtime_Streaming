@@ -236,25 +236,3 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
   ]
 }
 ```
-
-### 🤖 Version 3 (AI Enhancement - Forward Compatible)
-
-```json
-{
-  // ฟิลด์ V1 และ V2 ทั้งหมด...
-  
-  // ฟิลด์การวินิจฉัยด้วย AI:
-  "fields": [
-    {"name": "AI_DiagnosisScore", "type": ["null", "double"], "default": null},
-    {"name": "AbnormalityDetected", "type": ["null", "boolean"], "default": null},
-    {
-      "name": "AbnormalityRegions",
-      "type": ["null", {
-        "type": "array",
-        "items": "string"
-      }],
-      "default": null
-    }
-  ]
-}
-```
