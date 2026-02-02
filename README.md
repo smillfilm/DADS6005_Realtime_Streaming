@@ -95,20 +95,6 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 
 ## 6. ผลการทดลอง
 
-### 📊 การพัฒนา Schema ตามเวลา
-
-```mermaid
-graph LR
-    V1[Version 1<br/>Schema เริ่มต้น<br/>HN, Name, Age<br/>CTSCAN_Type] --> V2[Version 2<br/>เพิ่มฟิลด์ทางคลินิก<br/>+ BMI<br/>+ UnderlyingDisease<br/>+ TumorSize]
-    V2 --> V3[Version 3<br/>เพิ่ม AI<br/>+ AI_DiagnosisScore<br/>+ AbnormalityDetected]
-    V3 --> V4[Version 4<br/>มาตรฐาน<br/>+ fhirCompliantData<br/>+ icd10Codes]
-    
-    style V1 fill:#3498db,color:#fff
-    style V2 fill:#27ae60,color:#fff
-    style V3 fill:#f39c12,color:#fff
-    style V4 fill:#9b59b6,color:#fff
-```
-
 ### 6.1 โหมด Backward Compatibility (Default)
 
 **สถานการณ์:** แผนกมะเร็งวิทยาเพิ่มฟิลด์ใหม่ "TumorSize"
