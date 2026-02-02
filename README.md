@@ -154,20 +154,6 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 
 ## Schema Examples
 
-### ⚠️ Schema ต้นฉบับ (ต้องการปรับปรุง)
-
-```json
-{
-  "type": "record",
-  "name": "CTSCAN_ROOM",
-  "fields": [
-    {"name": "HN", "type": "int"},              // ❌ ควรเป็น string
-    {"name": "Name", "type": "string"},
-    {"name": "Surname", "type": "string"},
-    {"name": "Room_Number", "type": "int"},
-    {"name": "CTSCAN_Type", "type": "int"}      // ❌ ควรเป็น enum
-  ]
-}
 ```
 
 ### ✅ Version 1 (มืออาชีพ - Schema ที่ปรับปรุงแล้ว)
