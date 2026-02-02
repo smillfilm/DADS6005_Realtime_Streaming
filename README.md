@@ -12,11 +12,11 @@
 ## 📑 Table of Content
 
 1. [Overview](#1-Overview)
-2. [Specific details](#2-Specificdetails)
-3. [Existing issues](#3-Existingtissues)
+2. [Specific details](#2-Specific_details)
+3. [Existing issues](#3-Existing_tissues)
 4. [Motivation](#4-Motivation)
-5. [Problem statement](#5-Problemstatement)
-6. [Experimental results](#6-Experimentalresults)
+5. [Problem statement](#5-Problem_statement)
+6. [Experimental results](#6-Experimental_results)
    
 ---
 
