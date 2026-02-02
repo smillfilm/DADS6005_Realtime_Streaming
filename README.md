@@ -1,12 +1,11 @@
+
+
 # 🏥 Schema Registry สำหรับการส่งข้อมูล CT Scan ในโรงพยาบาล
 
-[![Project Status](https://img.shields.io/badge/status-recommended-success.svg)](https://github.com)
-[![Compatibility](https://img.shields.io/badge/compatibility-backward%20%7C%20forward%20%7C%20full-blue.svg)](https://github.com)
-[![Healthcare](https://img.shields.io/badge/industry-healthcare-red.svg)](https://github.com)
-
-> **การประเมินโครงการ: มีคุณค่าสูงและแนะนำให้ดำเนินการ** ✅
-> 
-> โครงการนี้ตอบโจทย์ปัญหาการบูรณาการข้อมูลทางการแพทย์ที่สำคัญ และขอแนะนำเป็นอย่างยิ่งให้นำไปใช้งาน
+Group members:
+1. Sumonsiri Techasuntharowat 6720422007
+2. Sahaphum Ketkaew 6720422010
+3. Kritsada Matkaruchit 6720422028
 
 ---
 
