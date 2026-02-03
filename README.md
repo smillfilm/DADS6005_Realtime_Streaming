@@ -1,4 +1,4 @@
-# 🏥 Schema Registry สำหรับการส่งข้อมูล CT Scan ในโรงพยาบาล
+# 🏥 Schema Registry Implementation for Hospital CT Scan Data Transfer
 
 ## Group members:
 1. Sumonsiri Techasuntharowat 6720422007
