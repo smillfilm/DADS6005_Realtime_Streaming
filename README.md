@@ -95,67 +95,67 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 ### 1.1.1 Delete Column: No Default Value
 * **Action:** Delete `Telephone`
 * **Status:** Unable to delete (422 Unprocessable Entity)
-![Test 1.1.1](images/Full01.png)
+![Test 1.1.1](Image/Full01.png)
 
 ### 1.1.2 Delete Column: With Default Value
 * **Action:** Delete `BMI`
 * **Status:** Success
-![Test 1.1.2](images/Full02.png)
+![Test 1.1.2](Image/Full02.png)
 
 ### 1.1.3 New Column: No Default Value
 * **Action:** Insert `Address`
 * **Status:** Unable to Insert
-![Test 1.1.3](images/Full03.png)
+![Test 1.1.3](Image/Full03.png)
 
 ### 1.1.4 New Column: With Default Value
 * **Action:** Insert `BMI`
 * **Status:** Success
-![Test 1.1.4](images/Full04.png)
+![Test 1.1.4](Image/Full04.png)
 
 ### 1.1.5 Delete Multiple: No Default Values
 * **Action:** Delete `Telephone` and `Diagnosis`
 * **Status:** Unable to Delete
-![Test 1.1.5](images/Full05.png)
+![Test 1.1.5](Image/Full05.png)
 
 ### 1.1.6 Delete Multiple: Mixed (No Default + Default)
 * **Action:** Delete `Diagnosis` and `BMI`
 * **Status:** Unable to Delete
-![Test 1.1.6](images/Full06.png)
+![Test 1.1.6](Image/Full06.png)
 
 ### 1.1.7 Delete (No Default) & Insert (No Default)
 * **Action:** Delete `Diagnosis`, Insert `Slicethickness`
 * **Status:** Unable to Delete/Insert
-![Test 1.1.7](images/Full07.png)
+![Test 1.1.7](Image/Full07.png)
 
 ### 1.1.8 Delete (No Default) & Insert (With Default)
 * **Action:** Delete `Diagnosis`, Insert `Email`
 * **Status:** Unable to Delete/Insert
-![Test 1.1.8](images/Full08.png)
+![Test 1.1.8](Image/Full08.png)
 
 ### 1.1.9 Delete Multiple: All with Defaults
 * **Action:** Delete `Bloodgroup`, Delete `Radiationdose`
 * **Status:** Success
-![Test 1.1.9](images/Full09.png)
+![Test 1.1.9](Image/Full09.png)
 
 ### 1.1.10 Delete (With Default) & Insert (No Default)
 * **Action:** Delete `BMI`, Insert `Slicethickness`
 * **Status:** Unable to Delete/Insert
-![Test 1.1.10](images/Full10.png)
+![Test 1.1.10](Image/Full10.png)
 
 ### 1.1.11 Delete (With Default) & Insert (With Default)
 * **Action:** Delete `BMI`, Insert `Panic`
 * **Status:** Success
-![Test 1.1.11](images/Full11.png)
+![Test 1.1.11](Image/Full11.png)
 
 ### 1.1.12 New Column & New Column (Mixed)
 * **Action:** Insert `Address` (No Default), Insert `Slicethickness` (Default)
 * **Status:** Unable to Insert
-![Test 1.1.12](images/Full12.png)
+![Test 1.1.12](Image/Full12.png)
 
 ### 1.1.13 New Column & New Column (Both with Defaults)
 * **Action:** Insert `Slicethickness`, Insert `Radiationdose`
 * **Status:** Success
-![Test 1.1.13](images/Full13.png)
+![Test 1.1.13](Image/Full13.png)
 
 ---
 
