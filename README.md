@@ -65,28 +65,77 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 
 ## 6. Experimental Results
 
-### 6.1 โหมด Backward Compatibility (Default)
-**สถานการณ์:** แผนกมะเร็งวิทยาต้องการเพิ่มฟิลด์ใหม่ `TumorSize`
+### 6.1 Forward Compatibility (Forward mode)
 
-| กรณีทดสอบ | การดำเนินการ | ผลลัพธ์ | ผลกระทบ |
-| :--- | :--- | :--- | :--- |
-| เพิ่มฟิลด์ Optional | เพิ่ม `TumorSize` (default: null) | ✅ สำเร็จ | Consumers เก่ายังทำงานได้ปกติ |
-| ลบฟิลด์ Optional | ลบ `Room_Number` | ✅ สำเร็จ | Consumers ใหม่สามารถข้ามฟิลด์นี้ได้ |
-| เพิ่มฟิลด์ Required | เพิ่ม `InsuranceNumber` (บังคับ) | ❌ ปฏิเสธ | ป้องกัน Consumer เดิมพังเพราะไม่มีฟิลด์นี้ |
-| เปลี่ยน Data Type | เปลี่ยน `Age` จาก int → string | ❌ ปฏิเสธ | ทำลายความเข้ากันได้ของระบบปลายทาง |
+### 6.1.1 Delete Column: No Default Value
+* **Action:** Delete `Diagnosis`
+* **Status:** Unable to delete (422 Unprocessable Entity)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e968b853-fb87-42be-8b2a-2b6bd566c2fc" alt="Test 1.1.1" width="800">
+</p>
 
-> **💡 สรุป:** Backward Mode เหมาะสำหรับการอัปเกรดฝั่ง Consumer ก่อนเพื่อเตรียมรับข้อมูลใหม่
+### 6.1.2 Delete Column: With Default Value
+* **Action:** Delete `RadiationDose`
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b1623e65-f5bd-4570-b84a-52b5f0406f88" alt="Test 1.1.1" width="800">
+</p>
+
+### 6.1.3 New Column: No Default Value
+* **Action:** Insert `TumorSize` 
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cffa8f97-2288-4f4b-bf1c-804aa92bf7b1" alt="Test 1.1.1" width="800">
+</p>
+
+### 6.1.4 New Column: With Default Value
+* **Action:** Insert `BMI` 
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d4b24161-c1b5-4d2c-8563-8fd06cbe084e" alt="Test 1.1.1" width="800">
+</p>
+
+
+
+
 
 ---
 
-### 6.2 โหมด Forward Compatibility
-**สถานการณ์:** ห้อง CT Scan อัปเกรดเครื่องมือและต้องการส่งข้อมูล `RadiationDose` ทันที
+### 6.2 Backward Compatibility (Backward mode)
 
-| กรณีทดสอบ | การดำเนินการ | ผลลัพธ์ | ผลกระทบ |
-| :--- | :--- | :--- | :--- |
-| เพิ่มฟิลด์ใหม่ | เพิ่ม `RadiationDose` | ✅ สำเร็จ | Consumer เก่าจะเพิกเฉยฟิลด์ที่เพิ่มมา |
-| ลบฟิลด์ Optional | ลบ `Room_Number` | ✅ สำเร็จ | ระบบเดิมยังทำงานต่อได้ไม่มีปัญหา |
-| เพิ่มฟิลด์ Required | เพิ่ม `ContrastBatchNumber` | ❌ ปฏิเสธ | Consumer เก่าจะไม่รองรับข้อมูลนี้ |
+### 6.2.1 Delete Column: No Default Value
+* **Action:** Delete `TumorSize` 
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6642034b-0182-459d-8d91-556333034f42" alt="Test 1.1.1" width="800">
+</p>
+
+### 6.2.2 Delete Column: No Default Value
+* **Action:** Delete `Room_Number` 
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/22cc97e7-b9d1-4cdb-9e55-ee1192a2ef67" alt="Test 1.1.1" width="800">
+</p>
+
+### 6.2.3 New Column: No Default Value
+* **Action:** Insert `SliceThickness` 
+* **Status:** Unable to delete (422 Unprocessable Entity)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1198ad1f-49cd-4631-b365-ef9adddb9dcd" alt="Test 1.1.1" width="800">
+</p>
+
+### 6.2.4 New Column: With Default Value
+* **Action:** Insert `Bloodgroup` 
+* **Status:** Success
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1526ae9e-1bc4-4239-9e75-343a00a295da" alt="Test 1.1.1" width="800">
+</p>
+
+
+
+
+
+
 
 ---
 
