@@ -14,6 +14,7 @@
 4. [Motivation](#4-motivation)
 5. [Problem Statement](#5-problem-statement)
 6. [Experimental Results](#6-experimental-results)
+7. [Conclusion](#7-Conclusion)
 
 ---
 
@@ -47,12 +48,11 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 ## 5. Problem Statement
 
 ### 📥 ข้อมูลนำเข้า (Input)
-ข้อมูลจาก CT Scan ประกอบด้วยข้อมูลสำคัญ 5 ส่วน:
-* **Patient Demographics:** HN, Name, Surname, Age, Gender
-* **Clinical Data:** Underlying Ddsease
-* **Scan Metadata:** ScanID, CTSCAN_Type, Scan date, Radiologist
+ข้อมูลจาก CT Scan ประกอบด้วยข้อมูลสำคัญ 4 ส่วน:
+* **Patient Demographics:** HN, Name, Surname, Telephone, Age, Gender
+* **Scan Metadata:** ScanDate, Room_Number, ScanID, CTSCAN_Type, Radiologist
 * **Imaging Details:** RadiationDose
-* **Findings:** Diagnosis, Tumor size
+* **Findings:** Diagnosis
 
 ### 🎯 วัตถุประสงค์ (Objective)
 1. ออกแบบและนำระบบ Schema Registry มาใช้ เพื่อเปิดใช้งานการดึงข้อมูลแบบเลือกเฉพาะฟิลด์
@@ -184,7 +184,7 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 
 ---
 
-## 💡 Summary Conclusion
+## 7. Conclusion
 
 การมี **ค่าเริ่มต้น (default value)** คือปัจจัยที่สำคัญที่สุดในการตัดสินความเข้ากันได้ (Compatibility) เมื่อใช้งานโหมด **FULL**:
 
