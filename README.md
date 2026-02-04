@@ -92,115 +92,91 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 
 ### 6.3 Full Compatibility (Bidirectional/Full mode)
 
-### 1.1.1 Delete Column: No Default Value
+### 6.3.1 Delete Column: No Default Value
 * **Action:** Delete `Telephone`
 * **Status:** Unable to delete (422 Unprocessable Entity)
 <p align="center">
   <img src="Image/Full01.png" alt="Test 1.1.1" width="800">
 </p>
 
----
-
-### 1.1.2 Delete Column: With Default Value
+### 6.3.2 Delete Column: With Default Value
 * **Action:** Delete `BMI`
 * **Status:** Success
 <p align="center">
   <img src="Image/Full02.png" alt="Test 1.1.2" width="800">
 </p>
 
----
-
-### 1.1.3 New Column: No Default Value
+### 6.3.3 New Column: No Default Value
 * **Action:** Insert `Address`
 * **Status:** Unable to Insert
 <p align="center">
   <img src="Image/Full03.png" alt="Test 1.1.3" width="800">
 </p>
 
----
-
-### 1.1.4 New Column: With Default Value
+### 6.3.4 New Column: With Default Value
 * **Action:** Insert `BMI`
 * **Status:** Success
 <p align="center">
   <img src="Image/Full04.png" alt="Test 1.1.4" width="800">
 </p>
 
----
-
-### 1.1.5 Delete Multiple: No Default Values
+### 6.3.5 Delete Multiple: No Default Values
 * **Action:** Delete `Telephone` and `Diagnosis`
 * **Status:** Unable to Delete
 <p align="center">
   <img src="Image/Full05.png" alt="Test 1.1.5" width="800">
 </p>
 
----
-
-### 1.1.6 Delete Multiple: Mixed (No Default + Default)
+### 6.3.6 Delete Multiple: Mixed (No Default + Default)
 * **Action:** Delete `Diagnosis` and `BMI`
 * **Status:** Unable to Delete
 <p align="center">
   <img src="Image/Full06.png" alt="Test 1.1.6" width="800">
 </p>
 
----
-
-### 1.1.7 Delete (No Default) & Insert (No Default)
+### 6.3.7 Delete (No Default) & Insert (No Default)
 * **Action:** Delete `Diagnosis`, Insert `Slicethickness`
 * **Status:** Unable to Delete/Insert
 <p align="center">
   <img src="Image/Full07.png" alt="Test 1.1.7" width="800">
 </p>
 
----
-
-### 1.1.8 Delete (No Default) & Insert (With Default)
+### 6.3.8 Delete (No Default) & Insert (With Default)
 * **Action:** Delete `Diagnosis`, Insert `Email`
 * **Status:** Unable to Delete/Insert
 <p align="center">
   <img src="Image/Full08.png" alt="Test 1.1.8" width="800">
 </p>
 
----
-
-### 1.1.9 Delete Multiple: All with Defaults
+### 6.3.9 Delete Multiple: All with Defaults
 * **Action:** Delete `Bloodgroup`, Delete `Radiationdose`
 * **Status:** Success
 <p align="center">
   <img src="Image/Full09.png" alt="Test 1.1.9" width="800">
 </p>
 
----
-
-### 1.1.10 Delete (With Default) & Insert (No Default)
+### 6.3.10 Delete (With Default) & Insert (No Default)
 * **Action:** Delete `BMI`, Insert `Slicethickness`
 * **Status:** Unable to Delete/Insert
 <p align="center">
   <img src="Image/Full10.png" alt="Test 1.1.10" width="800">
 </p>
 
----
-
-### 1.1.11 Delete (With Default) & Insert (With Default)
+### 6.3.11 Delete (With Default) & Insert (With Default)
 * **Action:** Delete `BMI`, Insert `Panic`
 * **Status:** Success
 <p align="center">
   <img src="Image/Full11.png" alt="Test 1.1.11" width="800">
 </p>
 
----
-
-### 1.1.12 New Column & New Column (Mixed)
+### 6.3.12 New Column & New Column (Mixed)
 * **Action:** Insert `Address` (No Default), Insert `Slicethickness` (Default)
 * **Status:** Unable to Insert
 <p align="center">
   <img src="Image/Full12.png" alt="Test 1.1.12" width="800">
 </p>
 
----
-
-### 1.1.13 New Column & New Column (Both with Defaults)
+### 6.3.13 New Column & New Column (Both with Defaults)
 * **Action:** Insert `Slicethickness`, Insert `Radiationdose`
 * **Status:** Success
 <p align="center">
@@ -221,5 +197,3 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 4.  **การดำเนินการแบบหลายรายการ (Bulk Operations):** หากมีการแก้ไขหลายคอลัมน์ในการอัปเดตครั้งเดียว การดำเนินการจะสำเร็จได้ก็ต่อเมื่อ **ทุกคอลัมน์** ที่เกี่ยวข้องปฏิบัติตามกฎการตั้งค่าเริ่มต้นอย่างเคร่งครัด
 
 > **Key Rule:** เพื่อให้มั่นใจว่า Schema จะเข้ากันได้แบบ **Backward** และ **Full** คอลัมน์ที่ถูกเพิ่มเข้า หรือลบออกทั้งหมด **ต้องมีการระบุค่าเริ่มต้น (Default Values) ไว้เสมอ**
-
----
