@@ -324,5 +324,3 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e49c3693-c13e-4428-a1a6-600cef72b651" alt="Test 1.1.12" width="800">
 </p>
-
-
