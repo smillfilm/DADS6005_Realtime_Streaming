@@ -245,3 +245,83 @@ Schema Registry เป็นระบบจัดการรูปแบบข�
 5. หากมีการแก้ไขหลายคอลัมน์ในการอัปเดตครั้งเดียว การดำเนินการจะสำเร็จได้ก็ต่อเมื่อ **ทุกคอลัมน์** ที่เกี่ยวข้องปฏิบัติตามกฎการตั้งค่าเริ่มต้นอย่างเคร่งครัด
 
 > **Key Rule:** เพื่อให้มั่นใจว่า Schema จะเข้ากันได้แบบ **Backward** และ **Full** คอลัมน์ที่ถูกเพิ่มเข้า หรือลบออกทั้งหมด **ต้องมีการระบุค่าเริ่มต้น (Default Values) ไว้เสมอ**
+
+
+## 8. Appendix: System Setup and Execution Guide
+
+### 8.1 Kafka System Setup Process
+
+### 8.1.1 Start Terminal Application
+* **Action:** Open terminal or command prompt on your system
+* **Purpose:** To execute Docker and Kafka commands
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fa3cf175-1989-473e-a8b5-573a11d3773b" alt="Test 1.1.12" width="800">
+</p>
+
+### 8.1.2 Navigate to Project Directory
+* **Action:** Change to the directory containing `docker-compose.yml`
+* **Command:** `cd /path/to/project-directory`
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/93780f42-14d9-4775-a5cf-873417a08269" alt="Test 1.1.12" width="800">
+  <img src="https://github.com/user-attachments/assets/e26b0293-00b7-4020-9f93-ee7e0ea15c4d" alt="Test 1.1.12" width="800">
+</p>
+
+
+### 8.1.3 Start Kafka Services
+* **Action:** Launch Kafka and dependencies using Docker Compose
+* **Command:** `docker-compose up -d`
+* **Expected Output:** Containers starting in background mode
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34ba3ac6-555e-4ee8-ba5a-748d2e91e2f1" alt="Test 1.1.12" width="800">
+</p>
+
+### 8.1.4 Verify Container Status
+* **Action:** Check all containers are running properly
+* **Command:** `docker ps`
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6f7b1a23-2a00-4e5f-9bc5-2061e16fd0af" alt="Test 1.1.12" width="800">
+</p>
+
+### 8.1.5 Access Kafka Management Interface
+* **Action:** Open Kafka UI 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dceda352-c1aa-4693-81fa-aa17f978b130" alt="Test 1.1.12" width="800">
+</p>
+
+
+
+### 8.2 Schema Registry Initialization
+### 8.2.1 Create Python Setup Script
+* **Action:** Create `Procedure.py` file with schema registration code
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d319cbb1-0efe-4257-9868-48c8b22dd114" alt="Test 1.1.12" width="800">
+</p>
+
+
+### 8.2.2 Execute Initial Registration
+* **Action:** Create `Procedure.py` file with schema registration code
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6bb0f6e7-42e2-4344-b027-588217afb7fa" alt="Test 1.1.12" width="800">
+</p>
+
+### 8.2.3 Verify Schema Registration
+* **Action:** Check schemas in Schema Registry UI
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bcec8e74-1809-4fb0-af4a-f83ae46df060" alt="Test 1.1.12" width="800">
+</p>
+
+### 8.2.4 Confirm Topic Creation and Messages
+* **Action:** Verify topics and test messages
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e49c3693-c13e-4428-a1a6-600cef72b651" alt="Test 1.1.12" width="800">
+</p>
+
+
